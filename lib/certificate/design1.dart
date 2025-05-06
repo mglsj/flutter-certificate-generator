@@ -96,12 +96,12 @@ class Design1 {
                       ),
                       Spacer(flex: 1),
                       _regularText(
-                        "This certeficate is proudly presented to:",
+                        "This certificate is proudly presented to:",
                         15,
                         primaryColor,
                       ),
                       Spacer(flex: 1),
-                      _dottedUndelineText(
+                      _dottedUnderlineText(
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -120,7 +120,7 @@ class Design1 {
                         children: [
                           _regularText("of ", 15, primaryColor),
                           Expanded(
-                            child: _dottedUndelineText(
+                            child: _dottedUnderlineText(
                               _handwrittenText(
                                 course,
                                 30,
@@ -136,7 +136,7 @@ class Design1 {
                         primaryColor,
                       ),
                       Spacer(flex: 1),
-                      _dottedUndelineText(
+                      _dottedUnderlineText(
                         _handwrittenText(
                           event,
                           30,
@@ -154,7 +154,7 @@ class Design1 {
                             primaryColor,
                           ),
                           Expanded(
-                            child: _dottedUndelineText(
+                            child: _dottedUnderlineText(
                               _handwrittenText(club, 30),
                             ),
                           ),
@@ -172,8 +172,11 @@ class Design1 {
                             primaryColor,
                           ),
                           Expanded(
-                            child: _dottedUndelineText(
-                              _handwrittenText(date, 30),
+                            child: _dottedUnderlineText(
+                              _handwrittenText(
+                                "1 March 2025",
+                                30,
+                              ),
                             ),
                           ),
                         ],
@@ -255,7 +258,7 @@ class Design1 {
     );
   }
 
-  Widget _dottedUndelineText(Widget text) {
+  Widget _dottedUnderlineText(Widget text) {
     return Stack(
       alignment: Alignment.bottomLeft,
       children: [
