@@ -9,7 +9,7 @@ class Design1 {
 
   static late final String sideDesign, orgLogo, clubLogo;
   static late final Font poppinsSemiboldFont, lazydogFont;
-  static late final MemoryImage signature1, signature2, signature3;
+  static late final MemoryImage signature1, signature2, signature3, signature4;
 
   static var _initialized = false;
 
@@ -28,10 +28,16 @@ class Design1 {
         (await rootBundle.load('assets/images/cc.png')).buffer.asUint8List());
 
     signature2 = MemoryImage(
-        (await rootBundle.load('assets/images/dean.png')).buffer.asUint8List());
-
+        (await rootBundle.load('assets/images/hod_cse.png'))
+            .buffer
+            .asUint8List());
     signature3 = MemoryImage(
-        (await rootBundle.load('assets/images/director.png'))
+        (await rootBundle.load('assets/images/hod_soc.png'))
+            .buffer
+            .asUint8List());
+
+    signature4 = MemoryImage(
+        (await rootBundle.load('assets/images/hld_dir.png'))
             .buffer
             .asUint8List());
 
@@ -174,7 +180,7 @@ class Design1 {
                           Expanded(
                             child: _dottedUnderlineText(
                               _handwrittenText(
-                                "1 March 2025",
+                                date,
                                 30,
                               ),
                             ),
@@ -192,16 +198,21 @@ class Design1 {
                         children: [
                           _signatureColumn(
                             signature2,
-                            "Dean Academics,\nGraphic Era Hill University\nHaldwani Campus",
+                            "Head Of Department\n(CSE)",
                           ),
                           Spacer(flex: 1),
                           _signatureColumn(
                             signature3,
-                            "Director,\nGraphic Era Hill University\nHaldwani Campus",
+                            "Head Of Department\n(SOC)",
                           ),
                           Spacer(flex: 1),
+                          _signatureColumn(
+                            signature4,
+                            "Director,\nHaldwani Campus",
+                          ),
                         ],
                       ),
+                      Spacer(flex: 1),
                     ],
                   ),
                 ),
